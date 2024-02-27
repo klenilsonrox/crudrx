@@ -2,4 +2,80 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+    background-color: #F5EBDC;
+    overflow-x: hidden;
+}
 
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 320px));
+    width: 100%;
+    max-width: 1280px;
+    padding: 10px;
+    justify-content: space-evenly;
+   margin: 0 auto;
+    gap: 20px 20px;
+}
+
+.img{
+    object-fit: cover;
+}
+
+
+.link {
+    transition: .4s linear;
+    padding: 5px 12px;
+}
+
+
+section ul li{
+list-style: disc;
+margin-left: 20px;
+}
+
+
+
+
+
+
+@keyframes anime {
+    from{
+        height: 0px;
+    } from{
+        height: 100px;
+    }
+}
+
+
+.hamb{
+    border-top: 3px solid;
+    display: block;
+    position: relative;
+    width: 25px;
+    transition: .3s linear
+}
+
+.hamb::after,.hamb::before{
+    content: "";
+    width: 25px;
+    height: 3px;
+    display: block;
+    margin-top: 6px;
+    background-color: white;
+    transition: .4s ease-in-out;
+}
+
+.hamb.ativo{
+    border-top-color: transparent ;
+}
+
+
+.hamb.ativo::before{
+    transform: rotate(135deg);
+}
+
+.hamb.ativo::after{
+    transform: rotate(-135deg);
+    margin-top: -2px;
+}
